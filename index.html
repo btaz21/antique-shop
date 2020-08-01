@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" charset="utf-8"></script>
     <title></title>
   </head>
   <body class="bg-light">
@@ -13,25 +14,49 @@
 
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="briefcase.svg" width="72" height="72" alt="">
-        <h2>Input Form</h2>
+        <h2>New Product Form</h2>
       </div>
 
-      <form class="" action="index.html" method="post">
+      <form class="needs-validation" novalidate>
         <div class="form-group">
-          <label for=""></label>
-          <input class="form-control" type="text" name="" value="">
-          <small class="form-text text-muted">Hello</small>
+          <label for="validationCustom01">Product Name</label>
+          <input class="form-control" id="validationCustom01" type="text" required>
+          <div class="invalid-feedback">
+          Please add a product name
+          </div>
         </div>
         <div class="form-group">
-          <label for=""></label>
-          <input class="form-control" type="text" name="" value="">
-          <small class="form-text text-muted">Hello</small>
+          <label for="">Price</label>
+          <input class="form-control" type="number">
         </div>
         <div class="form-group">
-          <label for=""></label>
-          <input class="form-control" type="text" name="" value="">
-          <small class="form-text text-muted">Hello</small>
+          <label for="">Description</label>
+          <textarea class="form-control" type="text" required></textarea>
+          <div class="invalid-feedback">
+          Please provide a description
+          </div>
         </div>
+        <div class="form-group">
+          <label for="">Hashtags</label>
+          <select class="form-control" type="text" required>
+            <option>midcentury</option>
+            <option>antique</option>
+            <option>modern</option>
+            <option>artdeco</option>
+            <option>chicago</option>
+          </select>
+          <div class="invalid-feedback">
+          Please add at least one hashtag
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Images</label>
+          <input class="form-control-file" type="file" required>
+        </div>
+        <div class="invalid-feedback">
+        Please include at least one image
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
 
     </div>
